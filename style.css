@@ -1,7 +1,9 @@
 :root{
  --primary: #0f02f8;
+ --secundary: #15307B;
  --branco: #fff;
  --preto: #000;
+ --preto-claro: #222;
  --cinza: #365265;
 }
 
@@ -81,14 +83,14 @@
  
 }
 
-/*-------Menu Btn styling--------*/
+/*============== Menu Btn styling =============*/
 .menu-btn{
  color: #fff;
  font-size: 23px;
  cursor: pointer;
  display: none;
 }
-/*-------HOME SECTION----------*/
+/*============== HOME SECTION =============*/
 
 .home{
  display: flex;
@@ -141,16 +143,13 @@
    background: none;
  }
 
-/* about */
-section{
+ /* ============= section =============*/
+
+ section{
   padding: 100px 0;
 }
 
-.about{
-  font-family: 'Poppins', sans-serif;
-}
-
-.about .title{
+ section .title{
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -160,7 +159,7 @@ section{
   font-family: 'Ubuntu', sans-serif;
 }
 
-.about .title::before{
+section .title::before{
   content: "";
   position: absolute;
   bottom: 0px;
@@ -171,8 +170,7 @@ section{
   transform: translateX(-50%);
 }
 
-.about .title::after{
-  content: "Quem eu sou";
+section .title::after{
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -183,7 +181,19 @@ section{
   transform: translateX(-50%);
 }
 
-.about .about-content{
+/* ============= about =============*/
+
+
+.about, .services{
+  font-family: 'Poppins', sans-serif;
+}
+
+.about .title::after{
+content: "Quem eu sou";
+}
+
+.about .about-content,
+.services .serv-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -236,9 +246,62 @@ section{
   color: var(--primary);
   background: none;
 }
+/*============== 3td page services ==============*/
+.services{
+  color: var(--branco);
+  background: var(--preto);
+  }
 
+.services .title::before{
+  background: var(--branco);
+  width: 220px;
+  }
 
-/* responsive */
+.services .title::after{
+  background: var(--preto);
+  content: "O que eu faço";
+  }
+
+.services .serv-content .card{
+  width: calc(33% - 20px);
+  background: var(--preto-claro);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer; 
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+  background: var(--primary);
+}
+
+.services .serv-content .card .box{
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box{
+  transform: scale(1.05);
+}
+
+.services .serv-content .card i{
+  font-size: 50px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+
+}
+
+.services .serv-content .card:hover i{
+  color: var(--branco);
+}
+
+.services .serv-content .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  
+}
+
+/*============== responsive ==============*/
 
 @media (max-width: 1330px){
   .home .max-width{
@@ -250,6 +313,7 @@ section{
   .about .about-content .left img{
     width: 350px;
     height: 350px;
+  }
 }
 
 @media (max-width: 991px){
@@ -258,7 +322,7 @@ section{
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 956px) {
   .menu-btn{
     display: block;
     z-index: 999;
@@ -325,6 +389,11 @@ section{
    .about .about-content .right {
     flex: 100%;
    }
+
+   .services .serv-content .card{
+     width: calc(50% - 10px);
+     margin-bottom: 20px;
+   }
 }
 
 @media (max-width: 690px){
@@ -341,6 +410,11 @@ section{
 
    .home .home-content a{
     font-size: 20px;
+  }
+
+  .services .serv-content .card{
+    width: 100%;
+
   }
 }
 
