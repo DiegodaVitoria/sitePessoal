@@ -27,11 +27,14 @@
  font-family: 'Ubuntu', sans-serif;
  transition: all 0.3s ease;
  z-index: 999;
+ text-shadow: 1px 1px 2px black;
 }
 
 .navbar.sticky{
  padding: 15px 0;
  background: var(--primary);
+ text-shadow: none;
+ 
 }
 
 .navbar .max-width{
@@ -71,7 +74,7 @@
  font-weight: 500;
  margin-left: 25px;
  transition: color 0.3s ease;
- text-shadow: 1px 1px 2px black;
+ 
 }
 
 .navbar .menu li a:hover{
@@ -145,6 +148,21 @@
 
  /* ============= section =============*/
 
+ .about, .services, .skills, .teams, .contact{
+  font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
  section{
   padding: 100px 0;
 }
@@ -181,23 +199,10 @@ section .title::after{
   transform: translateX(-50%);
 }
 
-/* ============= about =============*/
-
-
-.about, .services{
-  font-family: 'Poppins', sans-serif;
-}
+/* =============2 page about =============*/
 
 .about .title::after{
 content: "Quem eu sou";
-}
-
-.about .about-content,
-.services .serv-content{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .about .about-content .left{
@@ -247,7 +252,7 @@ content: "Quem eu sou";
   background: none;
 }
 /*============== 3td page services ==============*/
-.services{
+.services, .teams{
   color: var(--branco);
   background: var(--preto);
   }
@@ -299,6 +304,390 @@ content: "Quem eu sou";
   font-weight: 500;
   margin: 10px 0 7px 0;
   
+}
+
+/*============== 4td page skills ==============*/
+
+.skills .title::after{
+  content: "O que eu faço";
+}
+
+.skills .skills-content .column{
+  width:  calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .left p{
+  text-align: justify;
+}
+
+.skills .skills-content .left a{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+  color: var(--branco);
+  background: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover{
+  color: var(--primary);
+  background: none;
+}
+
+.skills .skills-content .right{
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+ }
+ 
+.skills .skills-content .right .bar{
+  margin: 20px 0;
+ }
+ 
+.skills .skills-content .right .bar:first-child{
+  margin-top: 0;
+ }
+ 
+.skills .skills-content .right .bar .info{
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+ }
+ 
+.skills .skills-content .right .bar .info span {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+ }
+ @keyframes showText {
+  100%{
+   opacity: 1;
+  }
+ }
+ 
+.skills .skills-content .right .bar .progress-line{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5),
+                    0px 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;                 
+ }
+ 
+ .bar .progress-line span{
+  height: 100%;
+  width: 80%;
+  background: var(--primary);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards; 
+ }
+ @keyframes animate {
+  100%{
+   transform: scaleX(1);
+  }
+ }
+ 
+ .progress-line.html span{
+  width: 90%;
+ }
+ 
+ .progress-line.css span{
+  width: 85%;
+ }
+ 
+ .progress-line.javascript span{
+  width: 50%;
+ }
+ 
+ .progress-line.node span{
+  width: 35%;
+ }
+ 
+ .progress-line.reactjs span{
+  width: 75%;
+ }
+ 
+ .bar .progress-line span::before{
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+ 
+ }
+ 
+ .bar .progress-line span::after{
+  position: absolute;
+  content: "80%";
+  right: 0;
+  top: -28px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #000;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+ }
+ @keyframes showText2 {
+  100%{
+   opacity: 1;
+  }
+ }
+ 
+ .progress-line.html span::after{
+  content: "90%";
+ }
+ 
+ .progress-line.css span::after{
+  content: "85%";
+ }
+ 
+ .progress-line.javascript span::after{
+  content: "50%";
+ }
+ 
+ .progress-line.node span::after{
+  content: "35%";
+ }
+ 
+ .progress-line.reactjs span::after{
+  content: "75%";
+ }
+
+/*============== Portifolio Page ==============*/
+
+.teams .title::after{
+  background: var(--preto);
+  content: "O que eu faço";
+}
+
+.teams .title::before{
+  background: var(--branco);
+  width: 220px;
+}
+
+.teams .carousel .card{
+    background: var(--preto-claro);
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+} 
+
+.teams .carousel .card:hover{
+  background: var(--primary);
+} 
+
+.teams .carousel .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box{
+  transform: scale(1.05);
+} 
+  
+.teams .carousel .card img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--primary)
+}
+
+.teams .carousel .card:hover img{
+  border-color: var(--branco);
+  transition: all 0.3s ease;
+}
+
+/* .owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid var(--primary)!important;
+  transition: all 0.3s ease;
+}
+
+.owl-dots.active{
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dots.active,
+.owl-dots:hover{
+  background: var(--primary)!important;
+} */
+/*============== CONTATO ==============*/
+
+.contact .title::after{
+  content: "entre em contato";
+  font-size: 18px;
+}
+
+.contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: var(--primary);
+}
+
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title{
+  color: var(--preto-claro);
+}
+
+.contact .right form .fields{
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+
+.contact .right form .name{
+  margin-right: 10px;
+}
+
+.contact .right form .email{
+  margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button{
+  height: 47px;
+  width: 170px;
+}
+
+.contact .right form .button button{
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: var(--branco);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover{
+  color: var(--primary);
+  background: none;
+  font-weight: 700;
+}
+
+/*============== Footer ==============*/
+
+footer{
+  background: var(--preto-claro);
+  padding: 20px 23px;
+  color: var(--branco);
+}
+
+footer span a{
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer span a:hover{
+  text-decoration: underline;
 }
 
 /*============== responsive ==============*/
@@ -394,6 +783,13 @@ content: "Quem eu sou";
      width: calc(50% - 10px);
      margin-bottom: 20px;
    }
+
+   
+  .skills .skills-content .column,
+  .contact .contact-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+  }
 }
 
 @media (max-width: 690px){
