@@ -101,7 +101,7 @@ p, h2, span, .text{
 
 .home{
  display: flex;
- background: url("img/Banner1.png") no-repeat center;
+ background: url("img/Banner2.png") no-repeat center;
  height: 100vh;
  color: var(--branco);
  min-height: 500px;
@@ -150,6 +150,23 @@ p, h2, span, .text{
    background: none;
  }
 
+
+ .home .home-content .social i{
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 22px 5px;
+  border-radius: 6px;
+  color: var(--branco);
+  transition: all 0.3s ease;
+  opacity: 10%;
+ }
+
+ .home .home-content i:hover{
+   color: var(--primary);
+   background: none;
+   opacity: 90%;
+ }
  /* ============= section =============*/
 
  .about, .services, .skills, .teams, .contact{
@@ -527,6 +544,10 @@ content: "Quem eu sou";
   transition: all 0.3s ease;
 }
 
+.teams .carousel .card .box p{
+  height: 45px;
+}
+
 .teams .carousel .card:hover .box{
   transform: scale(1.05);
 } 
@@ -539,17 +560,23 @@ content: "Quem eu sou";
 .teams .carousel .card .box .tech i{
   padding: 6px;
 }
+
+.teams .carousel .card .box .tech a{
+  color:var(--branco);
+}
   
 .teams .carousel .card img{
   width: 300px;
   height: 150px;
   object-fit: fill;
   border-radius: 6px;
+  filter: grayscale(1);
   border: 2px solid var(--preto-claro)
 }
 
 .teams .carousel .card:hover img{
   border-color: var(--branco);
+  filter: grayscale(60%);
   transition: all 0.3s ease;
 }
 
@@ -853,6 +880,10 @@ footer span a:hover{
 }
 
 @media (max-width: 500px){
+  .home{
+
+    background: url("img/Banner1.png") no-repeat center;
+  }
   .home .home-content .text-2{
     font-size: 50px;
    }
