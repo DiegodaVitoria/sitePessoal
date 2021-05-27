@@ -555,6 +555,7 @@ content: "Quem eu sou";
 .teams .carousel .card .box .tech{
   font-size: 35px;
   padding: 20px;
+  width: 320px;
 }
 
 .teams .carousel .card .box .tech i{
