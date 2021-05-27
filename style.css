@@ -577,7 +577,7 @@ content: "Quem eu sou";
 .owl-dots.active,
 .owl-dots:hover{
   background: var(--primary)!important;
-} */
+}
 /*============== CONTATO ==============*/
 
 .contact .title::after{
@@ -601,6 +601,7 @@ content: "Quem eu sou";
 
 .contact .contact-content .left .icons{
   margin: 10px 0;
+  color: var(--branco);
 }
 
 .contact .contact-content .row{
