@@ -1,5 +1,5 @@
 :root{
- --primary: #ff4e05;
+ --primary: #ff5900;
  --secundary: #15307B;
  --branco: #fff;
  --preto: #000;
@@ -315,7 +315,7 @@ content: "Quem eu sou";
 /*============== 4td page skills ==============*/
 
 .skills .title::after{
-  content: "O que eu sei";
+  content: "O que eu faço";
 }
 
 .skills .skills-content .column{
@@ -492,7 +492,7 @@ content: "Quem eu sou";
 
 .teams .title::after{
   background: var(--preto);
-  content: "O que eu fiz";
+  content: "O que eu faço";
 }
 
 .teams .title::before{
@@ -545,7 +545,7 @@ content: "Quem eu sou";
   height: 150px;
   object-fit: fill;
   border-radius: 6px;
-  border: 2px solid var(--preto-claro)
+  border: 2px solid var(--primary)
 }
 
 .teams .carousel .card:hover img{
