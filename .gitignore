@@ -5,5 +5,5 @@ vendor/
 # Para código C
 *.so
 # Para todos os arquivos e sub-pastas localizados na pasta bower_components/
-img/
+xxx/
 src/
