@@ -20,7 +20,7 @@ $(document).ready(function () {
   }
   /*=====================animation script====================*/
   var typed = new Typed(".typing", {
-    strings: ["Desenvolvedor", "Analista", "Programador"],
+    strings: ["Desenvolvedor.", "Analista.", "Programador."],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -70,5 +70,5 @@ $(document).ready(function () {
       });
     }
   });
-  
+
 });
