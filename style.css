@@ -14,6 +14,7 @@
  text-decoration: none;
 }
 
+
 p, h2, span, .text{
   color: var(--branco);
 }
@@ -97,6 +98,40 @@ p, h2, span, .text{
  cursor: pointer;
  display: none;
 }
+
+.scroll-up-btn{
+  position: fixed;
+  width: 45px;
+  height: 42px;
+  background: var(--primary);
+  right: 10px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: var(--branco);
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.scroll-up-btn a{
+  color: var(--branco);
+  width: 42px;
+  height: 42px;
+}
+
+.scroll-up-btn.header-scrolled{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 /*============== HOME SECTION =============*/
 
 .home{
@@ -151,7 +186,7 @@ p, h2, span, .text{
  }
 
 
- .home .home-content .social i{
+ .social i{
   display: inline-block;
   font-size: 40px;
   font-weight: 500;
@@ -159,10 +194,10 @@ p, h2, span, .text{
   border-radius: 6px;
   color: var(--branco);
   transition: all 0.3s ease;
-  opacity: 10%;
+  opacity: 15%;
  }
 
- .home .home-content i:hover{
+ .social i:hover{
    color: var(--primary);
    background: none;
    opacity: 90%;
@@ -582,30 +617,31 @@ content: "Quem eu sou";
 }
 
 
-/* .owl-dots{
+.owl-dots{
   text-align: center;
   margin-top: 20px;
 }
 
-.owl-dots{
+.owl-dot{
   height: 13px;
   width: 13px;
   margin: 0 5px;
   outline: none!important;
   border-radius: 50%;
-  border: 2px solid var(--primary)!important;
+  border: 2px solid var(--primary)!important ;
   transition: all 0.3s ease;
 }
 
-.owl-dots.active{
+.owl-dot.active{
   width: 35px;
   border-radius: 14px;
 }
 
-.owl-dots.active,
-.owl-dots:hover{
+.owl-dot.active,
+.owl-dot:hover{
   background: var(--primary)!important;
 }
+
 /*============== CONTATO ==============*/
 
 .contact .title::after{
@@ -744,6 +780,11 @@ footer span a:hover{
 }
 
 /*============== responsive ==============*/
+@media (max-width: 1920px){
+  .home{
+    background: url("img/Banner4.png") no-repeat center;
+}
+
 
 @media (max-width: 1330px){
   .home .max-width{

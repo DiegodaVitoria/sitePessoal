@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/131597f1fb.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -24,9 +25,12 @@
 </head>
 
 <body>
+  <div class="scroll-up-btn">
+    <a href="#home"><i class="fas fa-angle-up"></i></a>
+  </div>
   <nav class="navbar">
     <div class="max-width">
-      <div class="logo"><a href="#">da<span>Vitória.</span></a></div>
+      <div class="logo"><a href="#home">da<span>Vitória.</span></a></div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -48,14 +52,18 @@
       <div class="home-content">
         <div class="text-1">Olá, meu nome é</div>
         <div class="text-2">Diego da Vitória</div>
-        <div class="text-3">Eu sou <span>Desenvolvedor</span></div>
+        <div class="text-3">Eu sou <span class="typing"></span></div>
         <a href="#contact">Contate-me</a>
-        <div class="social">
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-github-square"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-whatsapp-square"></i>
-        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/diego-da-vitoria/" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/DiegodaVitoria" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-github-square"></i></a>
+        <a href="https://www.instagram.com/diego_davitoria/" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5527997511889&text=Ol%C3%A1%20eu%20sou%20Diego%20da%20Vitoria"
+          target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
       </div>
     </div>
   </section>
@@ -80,7 +88,7 @@
             HTML5, CSS3, React, Django, Git, Github, MySQL.
             A programação é uma área de múltiplas vertentes e de grandes desafios.
             São esses desafios que me impulsionam a continuar e a buscar aprender cada vez mais.</p>
-          <a href="#" download="./src/CV-Diego da Vitoria.pdf">Download Curriculum</a>
+          <a href="/CV-Diego da Vitoria.pdf" download="./CV-Diego da Vitoria.pdf">Download Curriculum</a>
         </div>
       </div>
     </div>
@@ -178,75 +186,89 @@
       <div class="carousel owl-carousel">
         <div class="card">
           <div class="box">
-            <a href="https://maratona-discovery-green.vercel.app/index2.html#" target="_blank"><img src="./img/DevFinance.png" alt=""></a>
-            <div class="text">DevFinance</div>
-            <p>Plataforma de Controle de entrada e saida de gastos.</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-              <i class="fab fa-js" style="color: #fc7563;"></i>
-            </div>
+            <a href="https://maratona-discovery-green.vercel.app/index2.html#" target="_blank">
+              <img src="./img/DevFinance.png" alt="">
+              <div class="text">DevFinance</div>
+              <p>Plataforma de Controle de entrada e saida de gastos.</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+                <i class="fab fa-js" style="color: #fc7563;"></i>
+
+              </div>
           </div>
+          </a>
         </div>
         <div class="card">
           <div class="box">
-            <a href="https://pomotime.vercel.app/" target="_blank"><img src="./img/PomoTime.png" alt=""></a>
-            <div class="text">PomoTime</div>
-            <p>{Projeto em andamento}.</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-              <i class="fab fa-js" style="color: #fc7563;"></i>
-              <i class="fab fa-react" style="color: #d163fc;"></i>
-              <i class="fab fa-node-js" style="color: #0cf300;"></i>
-            </div>
+            <a href="https://pomotime.vercel.app/" target="_blank">
+              <img src="./img/PomoTime.png" alt="">
+              <div class="text">PomoTime</div>
+              <p>{Projeto em andamento}.</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+                <i class="fab fa-js" style="color: #fc7563;"></i>
+                <i class="fab fa-react" style="color: #d163fc;"></i>
+                <i class="fab fa-node-js" style="color: #0cf300;"></i>
+
+              </div>
           </div>
+          </a>
         </div>
         <div class="card">
           <div class="box">
-            <a href="https://quiz-test-azure.vercel.app/" target="_blank"></a><img src="./img/Quiz.png" alt="">
-            <div class="text">Quiz</div>
-            <p>Quiz com 5 perguntas.</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-              <i class="fab fa-js" style="color: #fc7563;"></i>
-            </div>
+            <a href="https://quiz-test-azure.vercel.app/" target="_blank">
+              <img src="./img/Quiz.png" alt="">
+              <div class="text">Quiz</div>
+              <p>Quiz com 5 perguntas.</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+                <i class="fab fa-js" style="color: #fc7563;"></i>
+              </div>
           </div>
+          </a>
         </div>
         <div class="card">
           <div class="box">
-            <a href="https://todo-list-six-smoky.vercel.app/" target="_blank"><img src="./img/ToDo.png" alt=""></a>
-            <div class="text">Todo</div>
-            <p>Lista de Tarefas TODO.</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-              <i class="fab fa-js" style="color: #fc7563;"></i>
-            </div>
+            <a href="https://todo-list-six-smoky.vercel.app/" target="_blank">
+              <img src="./img/ToDo.png" alt="">
+              <div class="text">Todo</div>
+              <p>Lista de Tarefas TODO.</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+                <i class="fab fa-js" style="color: #fc7563;"></i>
+              </div>
           </div>
+          </a>
         </div>
         <div class="card">
           <div class="box">
-            <a href="https://card-shop-gamma.vercel.app/" target="_blank"><img src="./img/CardShop.png" alt=""></a>
-            <div class="text">CardShop</div>
-            <p>CardShop basico</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-            </div>
+            <a href="https://card-shop-gamma.vercel.app/" target="_blank">
+              <img src="./img/CardShop.png" alt="">
+              <div class="text">CardShop</div>
+              <p>CardShop basico</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+              </div>
           </div>
+          </a>
         </div>
         <div class="card">
           <div class="box">
-            <a href="https://petflix-app.vercel.app/"  target="_blank"><img src="./img/PETFLIX.png" alt=""></a>         
-            <div class="text">PetFlix</div>
-            <p>Projeto Netflix Alura</p>
-            <div class="tech">
-              <i class="fab fa-html5" style="color: #68f091;"></i>
-              <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
-            </div>
+            <a href="https://petflix-app.vercel.app/" target="_blank">
+              <img src="./img/PETFLIX.png" alt="">
+              <div class="text">PetFlix</div>
+              <p>Projeto Netflix Alura</p>
+              <div class="tech">
+                <i class="fab fa-html5" style="color: #68f091;"></i>
+                <i class="fab fa-css3-alt" style="color: #7088f3;"></i>
+              </div>
           </div>
+          </a>
         </div>
       </div>
     </div>
@@ -302,7 +324,7 @@
               <textarea cols="30" rows="10" placeholder="" required></textarea>
             </div>
             <div class="button">
-              <button type="submit">Enviar</button>
+              <button type="submit" href="mailto:diegoc.vitoria@gmail.com">Enviar</button>
             </div>
           </form>
         </div>
